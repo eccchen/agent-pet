@@ -32,7 +32,7 @@
     "smoke:onchainos-runtime": "tsx ./scripts/real-onchainos-runtime-smoke.ts"
   },
   "dependencies": {
-    "@agent-game/openclaw-client": "^0.1.0",
+    "@agent-game/openclaw-client": "workspace:*",
     "@okxconnect/universal-provider": "^1.9.1"
   },
   "devDependencies": {
