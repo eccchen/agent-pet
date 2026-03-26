@@ -1,9 +1,15 @@
 {
   "name": "@agent-game/openclaw-client",
   "version": "0.1.0",
-  "private": true,
   "type": "module",
-  "description": "OpenClaw-facing client and CLI for the agent game backend.",
+  "description": "Agent Pet OpenClaw client — HTTP client and CLI for the game backend.",
+  "keywords": ["agent-pet", "openclaw", "client", "blockchain", "game"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eccchen/agent-pet.git",
+    "directory": "packages/openclaw-client"
+  },
+  "files": ["dist", "README.md"],
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
