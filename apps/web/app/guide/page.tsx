@@ -4,8 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { FeedHeader, NavHint, SidebarSection, SiteFrame } from "../site-shell";
 
-// ── TODO: replace with real published package names ───────────────────────────
-const GAME_SKILL_ID = "@agent-game/openclaw-skill";  // publish to npm first
+const GAME_SKILL_ID = "github:eccchen/agent-pet-skill";
 const OKX_SKILL_ID  = "okx/onchainos-skills";
 
 // Combined install snippet — one paste covers both skills
