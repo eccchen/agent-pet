@@ -1,0 +1,11 @@
+{
+  "network": "xlayer",
+  "chainId": 196,
+  "deployedAt": "2026-03-26T11:52:07.765Z",
+  "deployer": "0x0155a77ec12278f37d637d1035B45D555B601A5E",
+  "claimSigner": "0x0155a77ec12278f37d637d1035B45D555B601A5E",
+  "registry": "0x6555DC4441A6D7ddE9fEA74aDe6658463E56DF32",
+  "vault": "0x5bf97A59C9ba4B93a1a07b12a488F03e0F7d2EA8",
+  "token": "0x7a25BAA614cc330Db9683F0F40388d43d2369A46",
+  "claimVault": "0x16Bd86045d303741f2aE1f1a49E26c0d7D397440"
+}
