@@ -3,7 +3,14 @@
   "version": "0.1.0",
   "type": "module",
   "description": "Agent Pet OpenClaw skill — control your on-chain pet agent in natural language.",
-  "keywords": ["agent-pet", "openclaw", "skill", "blockchain", "game", "okx"],
+  "keywords": [
+    "agent-pet",
+    "openclaw",
+    "skill",
+    "blockchain",
+    "game",
+    "okx"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/eccchen/agent-pet.git",
@@ -11,7 +18,11 @@
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": ["dist", "CLAUDE.md", "README.md"],
+  "files": [
+    "dist",
+    "CLAUDE.md",
+    "README.md"
+  ],
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "test": "corepack pnpm --dir ../openclaw-client build && node --test --import tsx ./src/skill.test.ts ./src/okx-host.test.ts ./src/okx-skill-bridge.test.ts ./src/openclaw-host-bridge.test.ts ./src/openclaw-host-smoke.test.ts ./src/real-host-config.test.ts ./src/command-presets.test.ts ./src/onchainos-cli-host.test.ts",
@@ -26,6 +37,7 @@
   },
   "devDependencies": {
     "@types/node": "^22.13.4",
+    "esbuild": "^0.27.4",
     "tsx": "^4.20.6",
     "typescript": "^5.7.3"
   }
