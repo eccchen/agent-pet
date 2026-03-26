@@ -14,10 +14,26 @@ function CopyBlock({ label, value }: { label: string; value: string }) {
   const [copied, setCopied] = useState(false);
 
   const copy = () => {
-    navigator.clipboard.writeText(value).then(() => {
+    const done = () => {
       setCopied(true);
       setTimeout(() => setCopied(false), 1800);
-    });
+    };
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(value).then(done).catch(() => fallback());
+    } else {
+      fallback();
+    }
+    function fallback() {
+      const ta = document.createElement("textarea");
+      ta.value = value;
+      ta.style.position = "fixed";
+      ta.style.opacity = "0";
+      document.body.appendChild(ta);
+      ta.focus();
+      ta.select();
+      try { document.execCommand("copy"); done(); } catch {}
+      document.body.removeChild(ta);
+    }
   };
 
   return (
