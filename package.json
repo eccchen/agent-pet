@@ -1,0 +1,23 @@
+{
+  "name": "agent-game",
+  "private": true,
+  "version": "0.0.0",
+  "packageManager": "pnpm@9.0.0",
+  "scripts": {
+    "validate:structure": "node -e \"const fs=require('fs');['apps','packages','contracts','docs'].forEach((dir)=>{if(!fs.existsSync(dir)) throw new Error('Missing '+dir);});console.log('Workspace structure OK');\"",
+    "dev:web": "corepack pnpm --dir apps/web dev",
+    "dev:server": "corepack pnpm --dir apps/server dev",
+    "mvp:start:server": "powershell -ExecutionPolicy Bypass -File ./scripts/start-mvp-server.ps1",
+    "mvp:smoke:local": "powershell -ExecutionPolicy Bypass -File ./scripts/smoke-local-mvp.ps1",
+    "mvp:playtest:economy": "powershell -ExecutionPolicy Bypass -File ./scripts/playtest-economy-loop.ps1 -StartServer",
+    "mvp:smoke:onchainos-runtime": "corepack pnpm --dir packages/openclaw-skill smoke:onchainos-runtime",
+    "mvp:playtest:onchainos-runtime": "powershell -ExecutionPolicy Bypass -File ./scripts/playtest-onchainos-runtime.ps1 -StartServer",
+    "build:web": "corepack pnpm --dir apps/web build",
+    "build:server": "corepack pnpm --dir apps/server build",
+    "build:contracts": "corepack pnpm --dir contracts build",
+    "build:openclaw-client": "corepack pnpm --dir packages/openclaw-client build",
+    "test:openclaw-client": "corepack pnpm --dir packages/openclaw-client test",
+    "build:openclaw-skill": "corepack pnpm --dir packages/openclaw-skill build",
+    "test:openclaw-skill": "corepack pnpm --dir packages/openclaw-skill test"
+  }
+}

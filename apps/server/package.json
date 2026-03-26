@@ -1,0 +1,29 @@
+{
+  "name": "@agent-game/server",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Minimal TypeScript backend shell for the agent game.",
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "test": "npm run build && node ./dist/auth.test.js && node ./dist/config.test.js && node ./dist/router.test.js && node ./dist/store.test.js && node ./dist/chain-sync.test.js && node ./scripts/smoke-x-upload.test.js",
+    "smoke": "node scripts/smoke.js",
+    "smoke:xlayer-claim": "node scripts/smoke-xlayer-claim.js",
+    "smoke:xlayer-real": "node scripts/smoke-xlayer-real.js",
+    "smoke:x-upload": "node scripts/smoke-x-upload.js"
+  },
+  "dependencies": {
+    "ethers": "^5.8.0"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  }
+}

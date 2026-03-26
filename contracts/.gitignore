@@ -1,0 +1,7 @@
+artifacts
+cache
+coverage
+deployments
+node_modules
+typechain-types
+.DS_Store

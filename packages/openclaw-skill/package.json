@@ -1,0 +1,26 @@
+{
+  "name": "@agent-game/openclaw-skill",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "OpenClaw-facing skill wrapper for the agent game.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "corepack pnpm --dir ../openclaw-client build && node --test --import tsx ./src/skill.test.ts ./src/okx-host.test.ts ./src/okx-skill-bridge.test.ts ./src/openclaw-host-bridge.test.ts ./src/openclaw-host-smoke.test.ts ./src/real-host-config.test.ts ./src/command-presets.test.ts ./src/onchainos-cli-host.test.ts",
+    "smoke": "tsx ./scripts/openclaw-host-smoke.ts",
+    "smoke:openclaw-host": "tsx ./scripts/openclaw-host-smoke.ts",
+    "smoke:okx-real": "tsx ./scripts/real-okx-host-smoke.ts",
+    "smoke:onchainos-runtime": "tsx ./scripts/real-onchainos-runtime-smoke.ts"
+  },
+  "dependencies": {
+    "@agent-game/openclaw-client": "workspace:*",
+    "@okxconnect/universal-provider": "^1.9.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.4",
+    "tsx": "^4.20.6",
+    "typescript": "^5.7.3"
+  }
+}

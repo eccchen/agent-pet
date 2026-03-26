@@ -1,0 +1,27 @@
+{
+  "name": "@agent-game/contracts",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Minimal Hardhat workspace for agent game contracts on X Layer testnet.",
+  "scripts": {
+    "build": "hardhat compile",
+    "clean": "hardhat clean",
+    "deploy:xlayer": "hardhat run scripts/deploy-xlayer.ts --network xlayer",
+    "deploy:xlayer-testnet": "hardhat run scripts/deploy-xlayer-testnet.ts --network xlayerTestnet",
+    "node": "hardhat node",
+    "smoke:local": "hardhat run scripts/smoke-local.ts --network hardhat",
+    "test": "hardhat test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.2.3",
+    "@types/node": "^22.13.0",
+    "dotenv": "^16.4.7",
+    "ethers": "5",
+    "hardhat": "^2.22.17",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  }
+}
